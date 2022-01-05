@@ -1,0 +1,17 @@
+int solution(int[] inputArray) {
+ int length = inputArray.Length;
+ int max = -1000000,prod;
+  if(length >=2 && length <= 10)
+  {
+    for (int i = 1 ; i< length ; i++)
+    {
+        prod =  inputArray[i] *  inputArray[i-1];
+        if(prod > max)
+        {
+              max = prod;
+        }
+    }   
+  }
+  return max;
+  
+}
