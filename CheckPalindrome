@@ -1,0 +1,16 @@
+bool solution(string inputString) {
+     int length = inputString.Length;
+            char[] newArray = new char[length];
+
+            if (length >= 1 && length <= 100000)
+            {
+                for (int i = length - 1, j = 0; i > -1 && j < length; i--, j++)
+                {
+                    newArray[j] = inputString[i];
+                }
+                string outputString = new string(newArray);
+                if (inputString == outputString) return true;
+
+            }
+            return false;
+}
